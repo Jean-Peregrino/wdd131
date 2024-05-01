@@ -14,7 +14,7 @@ box-sizing : border-box;
 
 body {
 height : 100vh;
-font-family :"Roboto";
+font-family :"Roboto", sans-serif;
 background-color : #ebebeb;
 }
 
