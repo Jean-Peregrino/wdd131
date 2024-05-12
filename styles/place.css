@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #fa0000;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px #333;
+}
+
+header,
+main {
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #fa0000;
+  color: white;
+}
+
+main > picture > img {
+  width: 100%;
+  display: block;
+}
+
+.summary {
+  padding: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+
+
+.summary > div {
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr;
+  gap: 0.5rem;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.summary > h3.weather::after {
+  content: url("/images/weather.svg");
+  display: inline-block;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-left: 1rem;
+}
+
+.weatherSummary {
+  
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.weatherSummary img {
+  align-self: center; /* Alinea la imagen al centro verticalmente */
+  max-width: 50px; /* Ajusta el tamaño máximo según sea necesario */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+footer {
+  background-color: #fa0000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}

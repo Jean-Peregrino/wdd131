@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place - Jean Carlo Peregrino</title>
+    <meta name="description" content="WDD 131 - Temple Album - Jean Peregrino">
+    <meta name="author" content="Jean Peregrino">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+    
+<body>
+    <header>
+        <h1> Cajamarca, Perú</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source srcset="images/cajamarca-peru-large.webp" media="(min-width: 1200px)">
+            <source srcset="images/cajamarca-peru-small.webp" media="(min-width: 668px)">
+            <img src="images/cajamarca-peru.webp" alt="Cajamarca Perú">
+        </picture>
+        
+        <section class="summary dataSummary">
+            <h3>Data</h3>
+            <div><span class="summaryTitle">Area</span><span>:</span><span id="area"> </span></div>
+            <div><span class="summaryTitle">Population</span><span>:</span><span id="population"> </span></div>
+            <div><span class="summaryTitle">Capital</span><span>:</span><span id="capital"> </span></div>
+            <div><span class="summaryTitle">Language</span><span>:</span><span id="language"> </span></div>
+            <div><span class="summaryTitle">Currency</span><span>:</span><span id="currency"> </span></div>
+            <div><span class="summaryTitle">Timezone</span><span>:</span><span id="timezone"> </span></div>
+            <div><span class="summaryTitle">Calling Code</span><span>:</span><span id="calling-code"> </span></div>
+            <div><span class="summaryTitle">Internet TLD</span><span>:</span><span id="internet-tld"> </span></div>
+        </section>
+        
+        <section class="summary weatherSummary">
+            <h3 class="weather">Weather</h3>
+            <img src="images/weather.svg" alt="weather-icon">
+            <div><span class="summaryTitle">Temperature</span><span>:</span><span id="temperature"> </span></div>
+            <div><span class="summaryTitle">Condition</span><span>:</span><span id="condition"> </span></div>
+            <div><span class="summaryTitle">Wind Speed</span><span>:</span><span id="wind-speed"> </span></div>
+            <div><span class="summaryTitle">Wind Chill</span><span>:</span><span id="wind-chill-summary"> </span></div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div>
+            <p>©<span id="currentyear"></span> - <span class="color-name">Jean Peregrino</span>, Perú</p>
+            <p>Last update: <span id="lastModified"></span></p>
+        </div>
+     </footer> 
+
+
+</body>
+</html>
