@@ -1,0 +1,54 @@
+@media screen and (min-width: 769px) {
+   
+    #main.nav {
+        display: flex;
+        align-items: center;        
+    }
+
+    .main-content .home-title {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    #nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav ul li {
+        margin: 0 1rem;
+    }
+
+    #nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #nav ul li a:hover {
+        text-decoration: underline double;
+        color: rgb(240, 95, 12);
+    }
+
+    .main-content {
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .res-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        
+    }
+
+    .hambutton {
+        visibility: hidden;
+        display: none;
+    } 
+}
+
