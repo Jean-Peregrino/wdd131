@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Carnaval de Cajamarca</title>
+    <meta name="author" content="Jean Peregrino">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-large.css">
+    <script src="siteplan.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Carnaval de Cajamarca</h1>
+        <button id="hambutton" class="hambutton"></button>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" data-target="home">Home</a></li>
+                <li><a href="#" data-target="history_and_origins">History and Origins</a></li>
+                <li><a href="#" data-target="event_schedule">Event Schedule</a></li>
+                <li><a href="#" data-target="photo_gallery">Photo Gallery</a></li>
+                <li><a href="#" data-target="visitor_information">Visitor Information</a></li>
+                <li><a href="#" data-target="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to the Cajamarca Carnival website. Here you can find all the information about the event.</p>
+        </section>
+        <section id="history_and_origins">
+            <h2>History and Origins</h2>
+            <p>The Cajamarca Carnival, known as the "Happiest Festival in Peru," has its roots in pre-Hispanic and European traditions. It has been celebrated since colonial times and has evolved into a massive cultural event. The festival includes a mix of Andean rituals and Spanish customs, reflecting the region's rich cultural heritage. During the carnival, the city is filled with music, dances, parades, and contests, with King Momo and Ño Carnavalón being the most emblematic characters.</p>
+        </section>
+        <section id="event_schedule">
+            <h2>Event Schedule</h2>
+            <p>The Cajamarca Carnival schedule includes a variety of events over several days. The main events are:</p>
+            <ul>
+                <li><strong>Coronation of the Carnival Queen:</strong> A glamorous event where the carnival representative is chosen.</li>
+                <li><strong>Entry of Ño Carnavalón:</strong> A parade marking the official start of the carnival with the entry of this symbolic character.</li>
+                <li><strong>Grand Carnival Parade:</strong> A colorful parade with troupes, floats, and traditional dances.</li>
+                <li><strong>Costume and Troupe Contests:</strong> Participants showcase their creativity and joy.</li>
+                <li><strong>Wake and Burial of Ño Carnavalón:</strong> Events marking the end of the carnival with rituals and satires.</li>
+            </ul>
+        </section>
+        <section id="photo_gallery">
+            <h2>Photo Gallery and Videos</h2>
+            <p>Explore our gallery to see vibrant photos and videos capturing the essence of the Cajamarca Carnival. Here you can see colorful costumes, exciting troupes, and the contagious joy of the participants.</p>
+            <div class="gallery">
+                <img src="img1.jpg" alt="Cajamarca Carnival Parade">
+                <img src="img2.jpg" alt="Carnival Queen">
+                <img src="img3.jpg" alt="Carnival Float">
+                <img src="img4.jpg" alt="Dance Troupe">
+                <img src="img5.jpg" alt="Night Celebrations">
+            </div>
+        </section>
+        <section id="visitor_information">
+            <h2>Visitor Information</h2>
+            <p>Plan your visit to the Cajamarca Carnival with the following useful information:</p>
+            <ul>
+                <li><strong>Dates:</strong> The carnival is celebrated in February, but the exact dates vary each year.</li>
+                <li><strong>How to Get There:</strong> Cajamarca has an airport with regular flights from Lima. You can also reach it by bus from various cities.</li>
+                <li><strong>Accommodation:</strong> It is recommended to book in advance. There are a variety of accommodation options, from hotels to hostels and temporary rentals.</li>
+                <li><strong>Travel Tips:</strong> Bring comfortable and water-resistant clothing, as the festivities include water and paint games. Also, be cautious with your belongings in large crowds.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>©<span id="currentyear"></span> - <span class="color-name">Jean Peregrino</span>, Perú</p>
+            <p>Last update: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

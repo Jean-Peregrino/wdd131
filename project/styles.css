@@ -1,0 +1,61 @@
+/* Mobile Styles */
+@media (max-width: 1023px) {
+    header {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .hambutton {
+        font-size: 1.5rem;
+        border: 0;
+        background: none;
+        color: white;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        visibility: visible;
+        display: block;
+    }
+
+    .hambutton::before {
+        content: "☰";
+    }
+
+    .hambutton.open::before {
+        content: "❌";
+    }
+
+    nav ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul.show {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 1em 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5em 0;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1em;
+    }
+}
+
+/* Mobile-specific styles when the navigation menu is visible */
+nav ul.show {
+    display: block;
+}
