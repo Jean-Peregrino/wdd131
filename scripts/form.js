@@ -31,7 +31,7 @@ const products = [
 ];
 
 function displayProducts(products, container) {
-    container.innerHTML = ""; // Clear any existing options
+    container.innerHTML = ""; 
     products.forEach(product => {
         const opt = document.createElement("option");
         opt.textContent = product.name;
@@ -44,21 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector(".products_container");
     displayProducts(products, container);
 
-    const fullYear = document.querySelector("#currentyear");
-    const lastModified = document.querySelector("#lastmodified");
-
-    // Use date object
-    const today = new Date();
-
-    fullYear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-    lastModified.innerHTML = `<span class="highlight">${new Intl.DateTimeFormat(
-        "en-US", {
-            dateStyle: "full"
-        }
-    ).format(today)}</span>`;
 });
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Rating logic
+
+document.getElementById("lastModified").textContent = document.lastModified;
+
+
+
 const ratingRadios = document.querySelectorAll("input[name='rating']");
 ratingRadios.forEach((radio) => {
     radio.addEventListener("click", function() {
@@ -80,13 +73,40 @@ ratingRadios.forEach((radio) => {
 });
 
 // LocalStorage review count logic for review.html
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.pathname.includes('review.html')) {
-        let reviewCount = localStorage.getItem('reviewCount') || 0;
-        reviewCount++;
-        localStorage.setItem('reviewCount', reviewCount);
-        const reviewCountElement = document.createElement('p');
-        reviewCountElement.textContent = `You have completed ${reviewCount} reviews.`;
-        document.querySelector('main').appendChild(reviewCountElement);
+const form = document.querySelector("form");
+    if (form) {
+        form.addEventListener("submit", function(event) {
+            localStorage.setItem('formSubmitted', 'true');
+        });
     }
-});
+
+    if (window.location.pathname.includes('review.html')) {
+        const formSubmitted = localStorage.getItem('formSubmitted');
+        if (formSubmitted === 'true') {
+            let reviewCount = localStorage.getItem('reviewCount') || 0;
+            reviewCount++;
+            localStorage.setItem('reviewCount', reviewCount);
+            localStorage.removeItem('formSubmitted');
+
+            const reviewCountElement = document.createElement('p');
+            reviewCountElement.textContent = `You have completed ${reviewCount} reviews.`;
+            document.querySelector('main').appendChild(reviewCountElement);
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        // Temporalmente, restablecer el contador de reseñas a 0
+        localStorage.setItem('reviewCount', 0);
+        console.log('Review count reset to 0');
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Obtiene la fecha actual y la formatea para el campo de fecha
+        const today = new Date();
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); // Enero es 0!
+        const yyyy = today.getFullYear();
+        const minDate = yyyy + '-' + mm + '-' + dd;
+
+        // Establece la fecha mínima en el campo de fecha
+        document.getElementById("installation-date").setAttribute("max", minDate);
+    });
