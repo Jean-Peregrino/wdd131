@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>WDD 131 - Form - Jean Peregrino</title>
+        <meta name="description" content="WDD 131 - Form - Jean Peregrino">
+        <meta name="author" content="Jean Peregrino">
+        <link rel="stylesheet" href="styles/form.css">
+        <script src="scripts/form.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get" class="container">
+            <fieldset>
+                <div>Product Name</div>
+                <select name="products_container" class="products_container" required>
+                    <option value="" disabled selected>Choose a Product...</option> 
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <div>Overall Rating</div>
+                <div class="star-rating">
+                    <div class="rating-score"><input type="radio" id="star1" required name="rating" value="1"><label for="star1" class="star">&#9733;</label></div>
+                    <div class="rating-score"><input type="radio" id="star2" required name="rating" value="2"><label for="star2" class="star">&#9733; &#9733;</label></div>
+                    <div class="rating-score"><input type="radio" id="star3" required name="rating" value="3"><label for="star3" class="star">&#9733; &#9733; &#9733;</label></div>
+                    <div class="rating-score"><input type="radio" id="star4" required name="rating" value="4"><label for="star4" class="star">&#9733; &#9733; &#9733; &#9733;</label></div>
+                    <div class="rating-score"><input type="radio" id="star5" required name="rating" value="5"><label for="star5" class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</label></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div>Date of Installation</div>
+                <label><input type="date" name="installation-date" id="installation-date" required></label>
+            </fieldset>
+
+            
+            
+            <fieldset>
+                <div>Which features did you find useful in the product?</div> 
+                <div><i>(Check all that apply)</i></div>
+                <label><input type="checkbox" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="usage" value="yes">Ease to Use</label>
+                <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+            </fieldset>
+
+            <fieldset>
+                <label><strong>Review</strong> <span class="optional">(Optional)</span></label>
+                <textarea name="write-review" id="write-review"></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <label><strong>Your Name</strong> <span class="optional">(Optional)</span></label>
+                <input type="text" name="fullname" placeholder="Full name">
+            </fieldset>
+
+            <input type="submit" value="Review Product">
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <p>©<span id="currentyear"></span> - <span class="color-name">Jean Peregrino</span>, Perú</p>
+            <p>Last update: <span id="lastmodified"></span></p>
+        </div>
+     </footer> 
+</body>
+</html>

@@ -1,0 +1,178 @@
+:root {
+    --clr-primary: #18394e;
+    --clr-secondary: #752546;
+    --clr-accent1: #ffffff;
+    --clr-accent2: #000000;
+    --clr-container:#ebe3e6;
+    --fw-thin: 100;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fs-100: 1rem;
+    --fs-300: 1.25rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.375rem;
+    --fs-600: 1.75rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    width: 100%
+}
+
+header {
+    background-color: var(--clr-primary);
+    color: var(--clr-accent1);
+    text-align: center;
+    height: 80px;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.container .star-rating label {
+    display: inline;
+}
+
+.container fieldset {
+    margin: 1.5rem 0;
+    border: 1px solid var(--clr-primary);
+    border-radius: 6px;
+}
+
+.container label {
+    display: block;
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+.container div {
+    padding: .5rem;
+    color: var(--clr-accent2);
+    font-weight: var(--fw-bold);
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container select,
+.container input[type="select"],
+.container textarea,
+.container input[type="date"] {
+    display: block;
+    border: solid 1px var(--clr-primary);
+    padding: .75rem;
+    color: black;
+    width: 50rem;
+    border-radius: 6px;
+    max-width: 480px;
+    background-color:var(--clr-container);
+}
+
+.container input[type="radio"],
+.container input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.star {
+    font-size: 30px;
+    color: rgb(46, 93, 163);
+}
+
+.star.filled, .rating-score input[type="radio"].filled + label {
+    color: gold;
+}
+
+.container input[type="submit"] {
+    border: none;
+    border-radius: 6px;
+    padding: .8rem;
+    background-color: rgb(31, 60, 104);
+    width: 100%;
+    color: var(--clr-accent1);
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.container input[type="submit"]:hover {
+    color: gold;
+    font-size: 22px;
+}
+.optional {
+    color: #0000ff; 
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif;
+}
+
+
+footer {
+    background-color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    color: var(--clr-accent1);
+    padding: 1rem;
+}
+
+.eduimage {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.icon {
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Styles specific to review.html */
+.review-page main {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--clr-accent1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.review-page header {
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.review-page p {
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+}
+
+@media screen and  (min-width: 720px) {
+    .container input[type="text"],
+    .container input[type="email"],
+    .container select,
+    .container input[type="select"],
+    .container textarea,
+    .container input[type="date"] 
+    {
+        display: block;
+        border: solid 1px var(--clr-primary);
+        padding: .75rem;
+        color: black;
+        width: 40rem;
+        border-radius: 6px;
+        max-width: 480px;
+        background-color: var(--clr-container);
+    }
+
+    .container input[type="radio"],
+    .container input[type="checkbox"] {
+        margin-right: 6px;
+    }
+}
