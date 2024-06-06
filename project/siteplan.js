@@ -14,12 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const lastModified = document.lastModified;
     lastModifiedSpan.textContent = lastModified;
 
-    // Hide all sections except the first one (home)
+    // Ocultar todas las secciones excepto la primera (home)
     sections.forEach((section, index) => {
-        if (index !== 0) {
+        if (section.id !== 'home') {
             section.style.display = 'none';
         }
     });
+
+    // Mostrar la sección home de inmediato
+    document.getElementById('home').style.display = 'block';
 
     // Function to handle navigation
     function handleNavigation(event) {

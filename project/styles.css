@@ -3,6 +3,8 @@
     header {
         padding: 1em;
         text-align: center;
+        flex-direction: column;
+        position: relative;
     }
 
     .hambutton {
@@ -29,6 +31,7 @@
         display: none;
         list-style: none;
         padding: 0;
+        margin-top: 1em;
     }
 
     nav ul.show {
@@ -43,6 +46,11 @@
     nav ul li a {
         display: block;
         padding: 0.5em 0;
+        transition: background-color 0.3s; 
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(218, 241, 12, 0.699); 
     }
 
     main {
@@ -53,9 +61,4 @@
         text-align: center;
         padding: 1em;
     }
-}
-
-/* Mobile-specific styles when the navigation menu is visible */
-nav ul.show {
-    display: block;
 }
